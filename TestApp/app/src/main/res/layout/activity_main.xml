@@ -10,27 +10,50 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.royab.testapp.MainActivity">
 
-    <TextView
+    <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:inputType="numberSigned|numberDecimal"
+        android:ems="10"
+        android:layout_marginTop="18dp"
+        android:id="@+id/firstNo"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 
-    <Spinner
-        android:layout_width="match_parent"
+    <TextView
+        android:text="+"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="74dp"
-        android:id="@+id/spinner"
-        android:layout_below="@+id/textView"
+        android:layout_marginTop="18dp"
+        android:id="@+id/signBox"
+        android:layout_below="@+id/firstNo"
         android:layout_centerHorizontal="true" />
 
     <Button
-        android:text="Button"
+        android:text="="
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/spinner"
+        android:layout_marginTop="39dp"
+        android:id="@+id/addButton"
+        android:layout_below="@+id/secondNo"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberSigned|numberDecimal"
+        android:ems="10"
+        android:id="@+id/secondNo"
+        android:layout_below="@+id/signBox"
+        android:layout_alignLeft="@+id/firstNo"
+        android:layout_alignStart="@+id/firstNo" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/addButton"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="56dp"
-        android:id="@+id/button" />
+        android:layout_marginTop="42dp"
+        android:id="@+id/ansBox"
+        android:text="                    " />
 </RelativeLayout>
