@@ -1,7 +1,8 @@
 package com.example.royab.testapp;
 
-import android.support.v7.app.AppCompatActivity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -19,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
         final TextView ansBox = (TextView) findViewById(R.id.ansBox);
 
         Button signButton = (Button) findViewById(R.id.addButton);
+        Button courseButton = (Button) findViewById(R.id.courseButton);
 
         signButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -27,6 +29,16 @@ public class MainActivity extends AppCompatActivity {
                 ans = Double.valueOf(firstNo.getText().toString()) + Double.valueOf(secondNo.getText().toString());
 
                 ansBox.setText(String.valueOf(ans));
+
+            }
+        });
+
+        courseButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                // Perform action on click
+                Intent myIntent = new Intent(MainActivity.this, VideoActivity.class);
+                myIntent.putExtra("key", 1); //Optional parameters
+                MainActivity.this.startActivity(myIntent);
 
             }
         });

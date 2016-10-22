@@ -11,49 +11,60 @@
     tools:context="com.example.royab.testapp.MainActivity">
 
     <EditText
+        android:id="@+id/firstNo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="numberSigned|numberDecimal"
-        android:ems="10"
-        android:layout_marginTop="18dp"
-        android:id="@+id/firstNo"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="18dp"
+        android:cursorVisible="true"
+        android:ems="10"
+        android:inputType="numberSigned|numberDecimal"
+        android:textIsSelectable="false" />
 
     <TextView
-        android:text="+"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="18dp"
         android:id="@+id/signBox"
-        android:layout_below="@+id/firstNo"
-        android:layout_centerHorizontal="true" />
-
-    <Button
-        android:text="="
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="39dp"
-        android:id="@+id/addButton"
-        android:layout_below="@+id/secondNo"
-        android:layout_centerHorizontal="true" />
+        android:layout_below="@+id/firstNo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="18dp"
+        android:text="+" />
 
     <EditText
+        android:id="@+id/secondNo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="numberSigned|numberDecimal"
-        android:ems="10"
-        android:id="@+id/secondNo"
-        android:layout_below="@+id/signBox"
         android:layout_alignLeft="@+id/firstNo"
-        android:layout_alignStart="@+id/firstNo" />
+        android:layout_alignStart="@+id/firstNo"
+        android:layout_below="@+id/signBox"
+        android:ems="10"
+        android:inputType="numberSigned|numberDecimal" />
+
+    <Button
+        android:id="@+id/addButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/secondNo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="14dp"
+        android:text="=" />
 
     <TextView
+        android:id="@+id/ansBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/addButton"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="42dp"
-        android:id="@+id/ansBox"
+        android:layout_marginTop="16dp"
         android:text="                    " />
+
+    <Button
+        android:id="@+id/courseButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/ansBox"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="44dp"
+        android:text="Play Video" />
 </RelativeLayout>
